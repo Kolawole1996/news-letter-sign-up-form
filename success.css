@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  font-family: ;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding: px;
   height: 100vh;
@@ -26,10 +26,12 @@ body {
 
 main {
   background-color: var(--White);
-  width: 30vw;
-  height: 50vh;
+  width: 32vw;
   border-radius: 30px;
   padding: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .success-content img {
   width: 50px;
@@ -37,28 +39,70 @@ main {
 }
 
 .thanks {
-  font-size: 40px;  
+  font-size: 40px;
   color: var(--Dark-Slate-Grey);
   margin-bottom: 20px;
 }
 
 p {
-   font-size: 16px; 
-   color: var(--Dark-Slate-Grey);
-   margin-bottom: 30px;
+  font-size: 16px;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 30px;
 }
 
 button {
-    border: solid ;
-    border-radius: 8px;
-    background-color:var(--Dark-Slate-Grey) ;
-    color: var(--White);
-    padding: 16px;
-    width: 100%;
+  border: solid;
+  border-radius: 8px;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  padding: 16px;
+  width: 100%;
 }
 
 button a {
-    color: var(--White);
-    border: none;
-    text-decoration: none;
+  color: var(--White);
+  border: none;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 100px;
+    height: 60vh;
+    width: 40vw;
+  }
+  p {
+    margin-bottom: 30px;
+    width: 36vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    height: 100vh;
+    border-radius: 0;
+    padding: 40px;
+    width: 100%;
+  }
+  .success-content img {
+    width: 60px;
+    margin-bottom: 40px;
+  }
+  .thanks {
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 40%;
+  }
+  button {
+    padding: 16px;
+    width: 100%;
+    margin-top: 40%;
+  }
 }
