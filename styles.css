@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--Charcoal-Grey);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 90%;
+  background-color: var(--White);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 24px 24px 24px 0px;
+}
+
+.content {
+  width: 55%;
+  padding: 0 56px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  color: var(--Dark-Slate-Grey);
+}
+
+.hero p {
+  color: var(--Dark-Slate-Grey);
+  margin: 32px 0;
+}
+
+.offers {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.offers li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.image {
+  width: 45%;
+}
+.image img {
+  width: 100%;
+}
+
+.image img:last-child {
+  display: none;
+}
+
+.inputs-form {
+  display: grid;
+  gap: 8px;
+}
+
+.inputs-form label {
+  color: var(--Dark-Slate-Grey);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inputs-form input {
+  height: 56px;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid var(--Grey);
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  color: var(--Dark-Slate-Grey);
+}
+
+.inputs-form input::placeholder {
+  font-size: 16px;
+  color: var(--Grey);
+}
+.inputs-form input:focus {
+  border: 1px solid black;
+  outline: 1px solid black;
+}
+
+.forms a {
+  background-color: var(--Dark-Slate-Grey);
+  padding: 24px;
+  display: block;
+  text-align: center;
+  color: var(--White);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero h1 {
+    font-size: 4.8vw;
+  }
+  .content {
+    padding: 0 40px;
+  }
+  .hero p {
+    margin: 24px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  main {
+    flex-direction: column-reverse;
+    padding: 0;
+    border-radius: 0;
+  }
+  .content {
+    padding: 40px 28px;
+  }
+  .content,
+  .image {
+    width: 100%;
+  }
+  .image img:first-child {
+    display: none;
+  }
+  .image img:last-child {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .offers li {
+    display: flex;
+    align-items: flex-start;
+  }
+}
